@@ -1,4 +1,4 @@
-<?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
     $name = filter_var(trim($_POST["name"]), FILTER_SANITIZE_STRING);
