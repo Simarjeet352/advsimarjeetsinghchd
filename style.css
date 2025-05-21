@@ -1,0 +1,242 @@
+/* Basic Reset & Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header & Navigation */
+header {
+    background: #2c3e50; /* Dark blue/grey */
+    color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: #007bff 3px solid; /* A touch of blue */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+   padding: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #007bff; /* Bright blue on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: #34495e; /* Slightly lighter dark blue */
+    color #ffffff;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #007bff;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* General Section Styling */
+section {
+   padding: 40px 0;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* About Section */
+.about-section ul {
+    list-style: disc;
+    mrgin-left: 20px;
+    padding-top: 10px;
+}
+
+/* Services Section */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service-item {
+    background: #f9f9f9;
+    padding: 25px;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: #007bff;
+    margin-top: 0;
+    fon-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-item ul {
+    list-style: none; /* No bullets for service items */
+    padding: 0;
+}
+
+.service-item ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.service-item ul li::before {
+    content: '✓'; /* Checkmark icon */
+    color: #28a745; /* Green checkmark */
+    position: absolute;
+    left: 0;
+}
+
+/* Publications/Resources Section */
+.resources-section ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+.resources-ection a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resources-section a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-section a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* Stack services on small screens */
+    }
+}
+
