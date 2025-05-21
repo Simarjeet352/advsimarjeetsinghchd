@@ -6,123 +6,85 @@
     <title>Contact Us</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Sets a clear, readable font */
+            background-color: #f4f4f4; /* Light gray background for the page */
+            display: flex; /* Uses Flexbox for easy centering of the form container */
+            justify-content: center; /* Horizontally centers the ontainer */
+            align-items: center; /* Vertically centers the container */
+            min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+            margin: 0; /* Removes default body margin */
+            padding: 20px; /* Adds padding around the content */
+            box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
         }
-       .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
+        .container {
+            background-color: #fff; /* White background for theform box */
+            padding: 30px; /* Padding inside the form box */
+            border-radius: 8px; /* Slightly rounded corners for the form box */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 100%; /* Makes the container take full width up to max-width */
+            max-width: 500px; /* Limits the maximum width of the form for better readability */
         }
         h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
+            text-align: center; /* Centers the "Contact Us" heading */
+           color: #333; /* Dark gray color for the heading */
+            margin-bottom: 20px; /* Space below the heading */
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 15px; /* Space between form fields */
         }
         .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            olor: #555;
-            font-weight: bold;
+            display: block; /* Makes labels appear on their own line above inputs */
+            margin-bottom: 5px; /* Space between label and input */
+            color: #555; /* Slightly lighter gray for labels */
+            font-weight: bold; * Makes labels bold */
         }
         .form-group input[type="text"],
         .form-group input[type="email"],
         .form-group input[type="tel"],
         .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
+            width: 100%; /* Inputs and textareas take full width of their container */
+            padding: 10px; /* Padding inside inputs */
+            border: 1px solid #ddd; /* Light gray border */
+            border-radius: 4px; /* Slightly rounded input corners */
+            box-sizing: border-box; /* Ensures paddingand border are included in width */
+            font-size: 16px; /* Standard font size for input text */
         }
         .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
+            resize: vertical; /* Allows vertical resizing of the textarea by the user */
+            min-height: 100px; /* Sets a minimum height for the textarea */
         }
-        form-group input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 18px;
-            width: 100%;
-            transition: background-color 0.3s ease;
+        .form-group input[type="submit"] {
+            background-color: #007bff; /* Blue background for the submit button */
+            color: white; /* White text for the button */
+           padding: 12px 20px; /* Padding inside the button */
+            border: none; /* Removes default border */
+            border-radius: 4px; /* Rounded corners for the button */
+            cursor: pointer; /* Changes cursor to a pointer on hover */
+            font-size: 18px; /* Larger font size for the button text */
+            width: 100%; /* Makes the button take full width */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
         }
-        .form-group input[type="submit"]:hover {
-            background-color: #0056b3;
+        .form-roup input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
         }
         .message {
-            margin-top: 20px;
-            padding: 10px;
-           border-radius: 4px;
-            text-align: center;
+            margin-top: 20px; /* Space above status messages */
+            padding: 10px; /* Padding inside status messages */
+            border-radius: 4px; /* Rounded corners for status messages */
+            text-align: center; /* Centers text in status messages */
         }
         .message.success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background-color: #d4edda; /* Light green background for sccess */
+            color: #155724; /* Dark green text for success */
+            border: 1px solid #c3e6cb; /* Green border for success */
         }
         .message.error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+            background-color: #f8d7da; /* Light red background for error */
+            color: #721c24; /* Dark red text for error */
+            border: 1px solid #f5c6cb; /* Red border for error */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form action="process_form.php" method="POST">
-            <iv class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="mobile">Your Mobile No.:</label>
-                <input type="tel" id="mobile" name="mobile">
-               <small style="color:#666;">(Optional, including country code)</small>
-            </div>
-            <div class="form-group">
-                <label for="query">Your Query/Message:</label>
-                <textarea id="query" name="query" required></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Send Message">
-            </div>
-        </form>
-
-        <?php
-        // This PHP block will only execute if this file is named contact.pp and accessed via a web server
-        // You would typically redirect after successful submission, or use AJAX for dynamic messages.
-        // For demonstration, we'll keep it simple.
-        if (isset($_GET['status'])) {
-            if ($_GET['status'] == 'success') {
-                echo '<div class="message success">Your message has been sent successfully!</div>';
-            } elseif ($_GET['status'] == 'error') {
-                echo '<div class="message error">There was an error sending your mesage. Please try again.</div>';
-            }
-        }
-        ?>
-    </div>
-</body>
+    </body>
 </html>
