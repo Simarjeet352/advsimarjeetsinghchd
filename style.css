@@ -7,11 +7,7 @@ body {
     color: #333;
     background-color: #f4f4f4;
 }
-
-
-
-}
-
+{
 /* Optional: Media queries for smaller screens */
 @media (max-width: 768px) {
     .whatsapp-float,  {
